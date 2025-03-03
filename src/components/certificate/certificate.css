@@ -1,0 +1,111 @@
+.container.sertifikats__container {
+  width: 100%;
+  padding-bottom: 4rem;
+  overflow: hidden;
+}
+.sertifikats-slider {
+  display: flex;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+.instansi__avatar {
+  width: 4rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  border: 0.4rem solid var(--color-primaty-variant);
+}
+.sertifikat {
+  flex: 0 0 40%;
+  background: var(--color-bg-variant);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  user-select: none;
+  margin-right: 20px;
+}
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.5rem;
+  background-color: var(--color-bg-variant);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--color-primaty);
+  font-size: 1.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+.slider-arrow:hover {
+  background-color: var(--color-primaty);
+  color: var(--color-light);
+}
+
+.slider-arrow.left {
+  left: 0.5rem;
+}
+
+.slider-arrow.right {
+  right: 0.5rem;
+}
+.sertifikat:last-child {
+  margin-right: 0; /* Hapus margin kanan pada elemen terakhir agar tidak ada ruang kosong di sisi kanan slider */
+}
+
+.pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.pagination-bullet.active {
+  background: var(--color-primaty);
+}
+.gambar__sertifikat {
+  color: var(--color-light);
+  font-weight: 300;
+  display: block;
+  width: 80%;
+  margin: 0.8rem auto 0;
+}
+.gambar__sertifikat img {
+  border-radius: 1rem;
+  width: 100%;
+  height: auto;
+}
+
+.swiper-pagination-clickable.swiper-pagination-bullet {
+  background: var(--color-primaty);
+}
+
+/* media queries  (medium devices)*/
+@media screen and (max-width: 1024px) {
+  .container.sertifikats__container {
+    width: 95%;
+  }
+  .sertifikats-slider {
+    width: 100%;
+  }
+  .sertifikat {
+    flex: 0 0 50%;
+    margin-right: 0;
+  }
+}
+
+/* media queries  (small devices)*/
+@media screen and (max-width: 600px) {
+  .container.sertifikats__container {
+    width: 95%;
+  }
+  .sertifikats-slider {
+    width: 100%;
+  }
+  .sertifikat {
+    flex: 0 0 100%;
+    margin-right: 0;
+  }
+}
